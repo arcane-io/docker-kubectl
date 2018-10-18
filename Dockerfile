@@ -3,7 +3,7 @@ FROM alpine
 RUN apk add --update --no-cache \
             bash \
             gpgme \
-            openssh \
+            openssh-client \
             curl \
             jq 
 

@@ -7,10 +7,10 @@ RUN apk add --update --no-cache \
             curl \
             jq 
 
-ENV PATH="/google-cloud-sdk/bin:${PATH}"
-
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
     && chmod +x ./kubectl \
     && mv ./kubectl /usr/local/bin/kubectl
 
-ENTRYPOINT [ "/bin/bash", "-l", "-c" ]
+RUN echo $PATH 
+
+ENTRYPOINT [ "/bin/bash", "-c" ]

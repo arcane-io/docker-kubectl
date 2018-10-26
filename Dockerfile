@@ -1,4 +1,4 @@
-FROM alpine
+FROM microsoft/azure-cli:latest
 
 RUN apk add --update --no-cache \
             bash \

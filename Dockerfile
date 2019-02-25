@@ -1,6 +1,7 @@
 FROM microsoft/azure-cli:latest
 
-RUN apk add --update --no-cache \
+RUN apk upgrade && \
+    apk add --update --no-cache \
             bash \
             gpgme \
             openssh-client \
